@@ -1,0 +1,249 @@
+/* Layout */
+#root {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background: rgba(12, 91, 71, 0.98);
+  /* Deep Forest Green */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s;
+  z-index: 1000;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-brand {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav {
+  padding: 24px 0;
+  flex: 1;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 5px;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  color: #aebdb4;
+  /* Light tint of green */
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  transition: all 0.3s;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left-color: var(--accent-sage);
+}
+
+.sidebar-nav a svg {
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+.sidebar-footer {
+  padding: 20px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #aebdb4;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar-link svg {
+  margin-right: 12px;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  background-color: transparent;
+  /* Let body gradient show through */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-header {
+  height: var(--header-height);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.content-wrapper {
+  padding: 30px;
+}
+
+/* Auth Screens (Login) need full width, no sidebar */
+.auth-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--primary-green);
+  width: 100%;
+}
+
+.social-card-style {
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-card-style:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.social-header {
+  height: 100px;
+}
+
+/* Premium Tables */
+.custom-table {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+.custom-table thead {
+  background-color: var(--primary-green) !important;
+}
+
+.custom-table thead th {
+  font-family: 'Outfit', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  padding: 20px 24px !important;
+  border: none !important;
+  font-weight: 600;
+}
+
+.custom-table tbody td {
+  padding: 18px 24px !important;
+  vertical-align: middle;
+  border-bottom: 1px solid #f2f2f2 !important;
+  color: #444;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+}
+
+.custom-table tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #fcfcfc;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-paid {
+  background-color: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+}
+
+.status-unpaid {
+  background-color: rgba(235, 87, 87, 0.1);
+  color: #eb5757;
+}
+
+/* Buttons */
+.btn-premium {
+  background-color: var(--primary-green);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.btn-premium:hover {
+  background-color: #094a3a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-icon-v2 {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #f8f9fa;
+  border: 1px solid #eee;
+  color: #444;
+  transition: all 0.2s;
+}
+
+.btn-icon-v2:hover {
+  background: var(--primary-green);
+  color: #fff;
+  border-color: var(--primary-green);
+}
+
+.btn-icon-v2.btn-delete:hover {
+  background: #e74c3c;
+  color: #fff;
+  border-color: #e74c3c;
+}

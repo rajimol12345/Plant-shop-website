@@ -1,0 +1,118 @@
+.newsletter-section-v2 {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.newsletter-card-v2 {
+  background-color: #0c5b47;
+  /* Greenova Deep Green */
+  padding: 80px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.newsletter-text-content {
+  flex: 1;
+}
+
+.newsletter-tagline {
+  font-family: 'Jost', sans-serif;
+  letter-spacing: 3px;
+  font-size: 14px;
+  color: #8da08e;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.newsletter-main-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.newsletter-info-text {
+  font-family: 'Jost', sans-serif;
+  color: #f9f8f6;
+  opacity: 0.8;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 90%;
+}
+
+.newsletter-form-container {
+  flex: 1;
+}
+
+.newsletter-v3-form {
+  display: flex;
+  width: 100%;
+}
+
+.newsletter-v3-input {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0 !important;
+  color: #fff !important;
+  font-family: 'Jost', sans-serif !important;
+  font-size: 1rem !important;
+  padding: 15px 0 !important;
+  transition: border-color 0.3s ease !important;
+}
+
+.newsletter-v3-input::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.newsletter-v3-input:focus {
+  border-bottom: 2px solid #7bae40 !important;
+  box-shadow: none !important;
+}
+
+.newsletter-v3-btn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  padding: 15px 0 15px 20px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.newsletter-v3-btn:hover {
+  color: #7bae40;
+}
+
+@media (max-width: 991px) {
+  .newsletter-card-v2 {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 30px;
+  }
+
+  .newsletter-main-title {
+    font-size: 2.22rem;
+  }
+
+  .newsletter-info-text {
+    max-width: 100%;
+  }
+
+  .newsletter-v3-form {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .newsletter-v3-btn {
+    padding: 15px 0;
+    justify-content: center;
+  }
+}

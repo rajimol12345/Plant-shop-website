@@ -1,0 +1,103 @@
+.product-card-v2 {
+  background-color: transparent;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.product-card-link {
+  display: block;
+  height: 100%;
+  color: inherit !important;
+}
+
+.shadow-sm-hover:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+  transform: translateY(-5px);
+}
+
+
+.product-img-v2 {
+  transition: transform 0.8s ease;
+  aspect-ratio: 1/1.2;
+  object-fit: cover;
+}
+
+.product-img-link:hover .product-img-v2 {
+  transform: scale(1.1);
+}
+
+.sale-badge-v2 {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #ff3333;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(255, 51, 51, 0.3);
+}
+
+.add-to-cart-overlay-v3 {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+  z-index: 3;
+}
+
+.product-img-link:hover .add-to-cart-overlay-v3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-cart-pill {
+  background-color: #F8B864 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 30px !important;
+  padding: 10px 25px !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 10px 20px rgba(248, 184, 100, 0.3) !important;
+}
+
+.btn-cart-pill:hover {
+  background-color: #0c5b47 !important;
+  box-shadow: 0 10px 20px rgba(45, 62, 50, 0.3) !important;
+}
+
+.product-title-v2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0c5b47;
+  margin-top: 10px;
+}
+
+.product-price-v2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.price-standard {
+  color: #0c5b47;
+}
+
+.highlight-orange {
+  color: #F8B864;
+}

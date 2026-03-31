@@ -1,0 +1,244 @@
+/* Core Page */
+.product-page {
+    background-color: #fff;
+    color: #0c5b47;
+    padding-top: 20px;
+}
+
+/* Breadcrumbs */
+.breadcrumb-area {
+    margin-bottom: 30px;
+}
+
+.breadcrumb-area a {
+    transition: color 0.2s;
+}
+
+.breadcrumb-area a:hover {
+    color: #7bae40 !important;
+}
+
+/* Product Image & Zoom */
+.product-image-wrapper {
+    position: relative;
+    /* No border radius or specific styling requested, usually clean */
+}
+
+.product-main-img {
+    width: 100%;
+    /* Ensure it scales */
+}
+
+.zoom-icon-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0c5b47;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.zoom-icon-btn:hover {
+    background-color: #0c5b47;
+    color: #fff;
+}
+
+
+/* Product Info */
+.product-display-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #0c5b47;
+    /* Theme Deep Green */
+    letter-spacing: 0.5px;
+}
+
+.product-display-price {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #7bae40;
+    /* Theme Orange per ref screen text "$63.00" */
+    margin-bottom: 1.5rem;
+}
+
+/* Quantity & Buttons */
+.qty-control {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    /* Slight round */
+    overflow: hidden;
+}
+
+.qty-btn {
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.qty-btn:hover {
+    color: #7bae40;
+}
+
+.qty-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    font-weight: 600;
+    color: #0c5b47;
+    outline: none;
+}
+
+.btn-add-to-cart {
+    background-color: #c08b98;
+    /* The faded rouge/purple color in one ref? Or Orange? 
+                                   Wait, reference screenshot button is PURPLE/ROSY: "Add to cart" with lighter text.
+                                   But Greenova theme is usually Green/Orange.
+                                   Actually, the "Add to cart" button in the specific reference URL/screenshot 
+                                   shows a PURPLE/PINK button? 
+                                   Ah, looking at "https://templatekit.jegtheme.com/Greenova/product/calathea-lancifolia/" 
+                                   The screenshot provided in context has a PURPLE "Add to cart" button. #a56084 maybe? 
+                                   Wait, let me look at the USER's previous request. 
+                                   "Reference image" shows "Add to cart" in a PURPLE box.
+                                   I will match that color if possible, or stick to theme Orange. 
+                                   Greenova usually uses that earthy purple too.
+                                   Let's use a nice dusty rose/purple logic or stick to the defined theme. 
+                                   Reviewing previous styling.. we used Orange/Green.
+                                   The screenshot specifically has a PURPLE button.
+                                   I will use `background-color: #a07488;` roughly, or just keep it Theme Orange for consistency if unverified.
+                                   Actually, looking at the provided screenshot in context...
+                                   "Add to cart" button is PURPLE.
+                                   I will use a similar color: #b17b96 (Dusty Rose).
+                                */
+    background-color: #b07c95;
+    /* Approximated from ref */
+    border: none;
+    color: #fff;
+    padding: 10px 30px;
+    font-weight: 700;
+    font-family: 'Jost', sans-serif;
+    /* Per typical theme usage */
+    font-size: 0.9rem;
+    border-radius: 4px;
+    /* Slight round */
+    text-transform: capitalize;
+    /* "Add to cart" not UPPERCASE in ref */
+}
+
+.btn-add-to-cart:hover {
+    background-color: #0c5b47;
+    color: #fff;
+}
+
+.btn-chat-expert {
+    border: 1px solid #ddd;
+    background: transparent;
+    color: #333;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+.btn-chat-expert:hover {
+    background-color: #f8f9fa;
+    color: #0c5b47;
+    border-color: #0c5b47;
+}
+
+/* Meta Data */
+.product-meta p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.text-theme-orange {
+    color: #7bae40 !important;
+    text-decoration: none;
+}
+
+/* Tabs */
+.product-tabs-section .nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+
+.product-tabs-section .nav-link {
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #888;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin-right: 20px;
+    background: transparent;
+}
+
+.product-tabs-section .nav-link.active {
+    color: #0c5b47;
+    border-bottom: 2px solid #0c5b47;
+    background: transparent;
+}
+
+.product-tabs-section .nav-link:hover {
+    color: #0c5b47;
+}
+
+/* Section Titles (Related Products, Reviews Header) */
+.section-title-alt {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    /* "REVIEWS" */
+    color: #0c5b47;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Reviews */
+.btn-theme-dark {
+    background-color: #0c5b47;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-theme-dark:hover {
+    background-color: #7bae40;
+    color: #fff;
+}
+
+/* Related Products Grid */
+.related-products-section h3 {
+    /* "Related Products" styling specific */
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-display-title {
+        font-size: 2rem;
+    }
+}

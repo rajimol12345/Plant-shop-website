@@ -1,0 +1,133 @@
+.shop-hero-section {
+    position: relative;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 41, 33, 0.4);
+    /* Deep Green overlay */
+    z-index: 1;
+}
+
+.shop-hero-container {
+    position: relative;
+    z-index: 2;
+}
+
+.shop-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.shop-breadcrumbs {
+    font-family: 'Jost', sans-serif;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.breadcrumb-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+    color: #fff;
+}
+
+.breadcrumb-separator {
+    margin: 0 10px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumb-current {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .shop-hero-section {
+        height: 250px;
+    }
+
+    .shop-title {
+        font-size: 2.5rem;
+    }
+}
+
+.shop-hero-section-v2 {
+    background-color: #f9f8f6;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.shop-hero-img-container {
+    width: 100%;
+    height: 500px;
+}
+
+.shop-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shop-hero-content-v2 {
+    background-color: #fff;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.shop-hero-subtitle {
+    color: #F8B864;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.shop-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #0c5b47;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.shop-hero-underline {
+    width: 100px;
+    height: 3px;
+    background-color: #F8B864;
+    margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+
+    .shop-hero-img-container,
+    .shop-hero-content-v2 {
+        height: 300px;
+    }
+
+    .shop-hero-title {
+        font-size: 2.5rem;
+    }
+}

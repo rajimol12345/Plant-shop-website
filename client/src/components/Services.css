@@ -1,0 +1,107 @@
+.services-section {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.service-col {
+  position: relative;
+  padding: 0 15px;
+}
+
+/* Vertical divider for large screens */
+@media (min-width: 992px) {
+  .service-col:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background-color: #e0e0e0;
+  }
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #F8B864;
+  /* Orange-Gold */
+  margin-right: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Make icons stroke-like where possible via CSS? */
+/* Typically font-awesome icons are filled. We can mimic outline style: */
+.service-icon svg {
+  stroke: #F8B864;
+  stroke-width: 10;
+  fill: none;
+  /* This might not work perfectly for all FA icons as paths vary, 
+       but for simple shapes it creates an outline effect.
+       Ideally we'd switch to an outline icon set, but 'fill: transparent; stroke: color' is a CSS trick. 
+       Let's try standard color first, then advanced stroke if needed.
+       The screenshot has thin orange lines. Standard FA icons are solid.
+       Let's use a simpler approach: thin stroke width if valid, or just color.
+    */
+  fill: #fff;
+  /* Fill inside white */
+  stroke: #F8B864;
+  stroke-width: 20px;
+  /* Adjust based on icon viewbox */
+  overflow: visible;
+}
+
+/* Better approach: Just use the color for now. The 'outline' effect 
+   requires specific icons or complex SVG manipulation. 
+   Let's stick to the color match first. */
+.service-icon svg {
+  fill: transparent;
+  stroke: #F8B864;
+  stroke-width: 30;
+}
+
+
+.service-content h3 {
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.service-content p {
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 991px) {
+  .service-item {
+    margin-bottom: 2rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .service-col {
+    margin-bottom: 1rem;
+  }
+}

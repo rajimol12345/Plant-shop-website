@@ -1,0 +1,85 @@
+.team-members-v2 {
+    background-color: #fff;
+    padding: 100px 0;
+}
+
+.team-subtitle-v2 {
+    color: #F8B864;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.team-title-v2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.title-bar-v2 {
+    width: 80px;
+    height: 4px;
+    background-color: #F8B864;
+    border-radius: 2px;
+}
+
+.team-card-v2 {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.team-img-wrapper-v2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-img-wrapper-v2 img {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.team-card-v2:hover .team-img-wrapper-v2 img {
+    transform: scale(1.05);
+}
+
+.team-info-box-v2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: #0c3b2e; /* Dark green matching reference */
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.team-card-v2:hover .team-info-box-v2 {
+    background-color: #1a5c48;
+}
+
+.member-name-v2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.member-role-v2 {
+    color: #8da08e; /* Light green-grey */
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .team-title-v2 {
+        font-size: 2.2rem;
+    }
+}

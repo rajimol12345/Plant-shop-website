@@ -1,0 +1,100 @@
+.footer-section-v2 {
+  background-color: #0c5b47;
+  /* Greenova Deep Green */
+  color: #fff;
+  padding-top: 80px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-dot {
+  color: #7bae40;
+  /* Theme Orange */
+}
+
+.footer-about-text {
+  font-family: 'Jost', sans-serif;
+  color: #fff;
+  opacity: 0.7;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.footer-sub-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.footer-nav-list li {
+  margin-bottom: 12px;
+}
+
+.footer-nav-list a {
+  color: #fff;
+  opacity: 0.7;
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.footer-nav-list a:hover {
+  color: #7bae40;
+  opacity: 1;
+  padding-left: 5px;
+}
+
+.footer-social-link {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-social-link:hover {
+  background-color: #7bae40;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.footer-contact-info span {
+  font-family: 'Jost', sans-serif;
+  color: #fff;
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
+
+.contact-icon-v2 {
+  color: #7bae40;
+}
+
+.payment-methods img {
+  display: block;
+}
+
+.border-secondary {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.footer-bottom-v2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 991px) {
+  .footer-logo {
+    font-size: 1.6rem;
+  }
+}

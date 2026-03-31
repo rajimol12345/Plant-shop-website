@@ -1,0 +1,88 @@
+.checkout-steps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0 40px;
+    text-decoration: none !important;
+}
+
+.step-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    width: 80px;
+    height: 2px;
+    background-color: #eee;
+    z-index: 1;
+}
+
+.step-item.active-step:not(:last-child)::after {
+    background-color: #F8B864;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.step-label {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+    transition: all 0.3s ease;
+}
+
+.step-item.active-step .step-number {
+    background-color: #F8B864;
+    color: #fff;
+    box-shadow: 0 0 0 5px rgba(248, 184, 100, 0.2);
+}
+
+.step-item.active-step .step-label {
+    color: #0c5b47;
+}
+
+.step-item.completed-step .step-number {
+    background-color: #0c5b47;
+    color: #fff;
+}
+
+.step-item.disabled-step {
+    cursor: default;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .step-item {
+        padding: 0 15px;
+    }
+
+    .step-item:not(:last-child)::after {
+        width: 30px;
+        right: -15px;
+    }
+}

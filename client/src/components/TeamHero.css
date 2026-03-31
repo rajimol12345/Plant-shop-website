@@ -1,0 +1,61 @@
+.team-hero-v2 {
+    background-color: #F9F8F6;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.hero-subtitle-v2 {
+    color: #F8B864;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.hero-title-v2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-breadcrumb-v2 {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.hero-breadcrumb-v2 .separator {
+    margin: 0 10px;
+    color: #ddd;
+}
+
+.hero-image-box {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.hero-image-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+@media (max-width: 991px) {
+    .team-hero-v2 {
+        padding: 60px 0;
+        text-align: center;
+    }
+    
+    .hero-title-v2 {
+        font-size: 3rem;
+    }
+
+    .hero-text-content {
+        padding-left: 0 !important;
+    }
+}

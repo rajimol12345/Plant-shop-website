@@ -1,0 +1,23 @@
+import React from 'react';
+import { Spinner } from 'react-bootstrap';
+
+const Loader = () => {
+    return (
+        <Spinner
+            animation="border"
+            role="status"
+            style={{
+                width: '100px',
+                height: '100px',
+                margin: 'auto',
+                display: 'block',
+                color: '#A4B24B'
+            }}
+        >
+            <span className="visually-hidden">Loading...</span>
+        </Spinner>
+    );
+};
+
+export default Loader;
+

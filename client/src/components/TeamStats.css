@@ -1,0 +1,12 @@
+.team-stats .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4a5d4b;
+    margin-bottom: 0.5rem;
+}
+
+.team-stats .stat-label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

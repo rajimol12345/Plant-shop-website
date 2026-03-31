@@ -1,0 +1,127 @@
+.about-screen {
+    background-color: #fff;
+}
+
+.promo-banner {
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.promo-banner:hover {
+    transform: translateY(-10px);
+}
+
+.promo-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(12, 91, 71, 0.1);
+    transition: background 0.4s ease;
+}
+
+.promo-banner:hover::before {
+    background: rgba(12, 91, 71, 0.2);
+}
+
+.promo-subtitle {
+    color: #8DA08E;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    position: relative;
+    z-index: 1;
+}
+
+.promo-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #0c5b47;
+    margin: 10px 0 20px;
+    max-width: 250px;
+    position: relative;
+    z-index: 1;
+}
+
+.promo-link {
+    color: #F8B864;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.promo-link:hover {
+    color: #0c5b47;
+}
+
+/* Services Section */
+.services-section {
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.service-item-v2 {
+    transition: all 0.3s ease;
+}
+
+.service-icon-v2 {
+    color: #F8B864;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.service-item-v2:hover .service-icon-v2 {
+    transform: scale(1.1);
+}
+
+.service-title-v2 {
+    font-family: 'Playfair Display', serif;
+    color: #0c5b47;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.service-text-v2 {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Team Preview Section */
+.team-preview-section {
+    background-color: #F9F8F6;
+    padding: 100px 0;
+}
+
+.team-preview-content {
+    max-width: 700px;
+}
+
+@media (max-width: 768px) {
+    .promo-banner {
+        height: 350px;
+    }
+
+    .promo-title {
+        font-size: 1.8rem;
+    }
+}

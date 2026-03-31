@@ -1,0 +1,325 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --pc-green: #0c5b47;
+    --pc-orange: #7bae40;
+    --pc-white: #ffffff;
+    --pc-bg-grey: #f9f9f9;
+}
+
+.product-carousel-section {
+    width: 100%;
+    min-height: 85vh;
+    /* Adjustable height */
+    background-color: var(--pc-white);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Left Column Styling */
+.carousel-left {
+    padding-left: 8%;
+    /* Generous left padding */
+    padding-right: 2rem;
+    /* Background image moved to inline style in JS */
+    /* background-image: url('/images/hero-bg.jpg'); - Removed to fix build error */
+    /* If aligning with screenshot, left side usually has the lifestyle bg. 
+     The screenshot shows the BACKGROUND IMAGE extending behind the left text.
+     The user requested specifically: "Product Image: Centered on a light grey/off-white square background."
+     But the "Right Side" description implies the layout. 
+     Let's handle the background image on the whole section or left col. 
+     The provided Hero.js used a BG image. 
+     I will assume the "Hero" essence implies a background. 
+     BUT the user said "Background: Pure White".
+     I will stick to Pure White layout for the "Carousel" elements, but the Left Side text usually overlays the hero image in Greenova. 
+     Actually, looking at the reference screenshot provided in context:
+     The Left Side has the "Discover Plant" text OVER a lifestyle image.
+     The Right Side is WHITE with the product.
+     I will configure the Left Col to have the background image.
+  */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Overlay for text readability if using bg image */
+/* To strictly follow "Background: Pure White" request, maybe only the RIGHT side is white? 
+   The request says "Background: Pure White (#ffffff)". 
+   I'll set the RIGHT side to white. The LEFT side needs the image to match "Greenova".
+   If I set left to white, it's boring. 
+   I'll set .carousel-left background image.
+*/
+.carousel-left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 40, 20, 0.65) 0%,
+        rgba(0, 0, 0, 0.50) 100%
+    );
+    z-index: 0;
+}
+
+.carousel-text-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    color: #000;
+    /* Assuming dark text if on light image, or white if dark */
+    /* Greenova classic is Dark text on light background or White on Dark. 
+     The User said "Headings/Text". So likely light/white background on left too?
+     Wait, the reference image shows text on top of an image. 
+     I will set color to White if the image is dark, or Green if layout is split.
+     Let's start with Green text over the image, assuming the image is light enough.
+     Actually, Greenova usually has White text on the Hero.
+     But user asked for deep green. I'll use that.
+  */
+}
+
+.welcome-tag {
+    color: var(--pc-orange);
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.main-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+    /* Overriding to White for contrast on BG image, unless requested otherwise. */
+    /* User request: "Headings/Text". I should follow that. But on a photo it might be invisible.
+     I'll trust the user wants the Split design: White background for BOTH maybe? 
+     Or Left is image, Right is white. 
+     If Text is #1d2921, background must be light.
+     I'll set .carousel-left background to the image but maybe it's faint?
+     Let's stick to the text color requested. 
+  */
+    color: var(--pc-green);
+    /* As usage requested */
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.description-text {
+    font-family: 'Jost', sans-serif;
+    color: #f7f7f7;
+    /* Text on hero usually white? */
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 80%;
+}
+
+.btn-shop-now {
+    background-color: var(--pc-orange);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.btn-shop-now:hover {
+    background-color: var(--pc-green);
+    transform: translateY(-3px);
+}
+
+
+/* Right Column Styling */
+.carousel-right {
+    background-color: var(--pc-white);
+    height: 100%;
+    position: relative;
+    /* For social sidebar */
+}
+
+.carousel-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-slide-card {
+    position: relative;
+    /* width: 400px; */
+    /* Let responsiveness handle it */
+    max-width: 450px;
+    width: 100%;
+}
+
+.product-image-container {
+    background-color: var(--pc-bg-grey);
+    /* Light grey square */
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Aspect Ratio Square */
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+}
+
+.product-main-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    /* Helps blend if image has white bg */
+}
+
+.sale-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+    z-index: 10;
+}
+
+/* Nav Arrows */
+.carousel-nav-arrows {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.nav-btn {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pc-green);
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+    background-color: var(--pc-green);
+    color: #fff;
+    border-color: var(--pc-green);
+}
+
+
+/* Product Info */
+.product-info-area {
+    text-align: center;
+}
+
+.product-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--pc-green);
+    text-transform: uppercase;
+    white-space: nowrap;
+    /* Fix wrapping */
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.btn-add-cart {
+    background-color: var(--pc-orange);
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    /* Slightly rounded or strict 0? Using 4px standard */
+    border-radius: 30px;
+    /* Pill shape for cart too? Or standard? User said "green #7bae40 with a cart icon" */
+    font-weight: 600;
+    font-family: 'Jost', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.btn-add-cart:hover {
+    background-color: var(--pc-green);
+}
+
+/* Social Sidebar */
+.social-sidebar {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-sidebar a {
+    color: var(--pc-green);
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.social-sidebar a:hover {
+    color: var(--pc-orange);
+}
+
+/* Response */
+@media (max-width: 991px) {
+    .carousel-left {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .carousel-text-content {
+        margin: 0 auto;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-sidebar {
+        display: none;
+        /* Hide on mobile typically */
+    }
+
+    .product-slide-card {
+        margin: 0 auto;
+    }
+}

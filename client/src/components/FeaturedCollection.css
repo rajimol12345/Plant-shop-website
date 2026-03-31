@@ -1,0 +1,139 @@
+.featured-collection-section {
+  padding: 2rem 0;
+}
+
+.text-primary-green {
+  color: var(--primary-green);
+  /* Assuming this variable is defined, usually the dark green */
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.collection-header h2 {
+  font-weight: 800;
+  font-size: 2.25rem;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.header-underline {
+  width: 60px;
+  height: 3px;
+  /* Slightly thicker */
+  background-color: #F8B864;
+  /* Orange-Gold line */
+  margin-top: 10px;
+}
+
+.collection-card-wrapper {
+  padding: 0 10px;
+  /* Tighter padding between cards */
+  margin-bottom: 20px;
+}
+
+.collection-card {
+  border: none;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0;
+  height: 540px;
+  /* Increased height for vertical aspect ratio */
+}
+
+.card-img-wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.collection-card .card-img {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  padding: 0;
+  /* User specific padding */
+  opacity: 1;
+  /* User specific opacity */
+}
+
+.collection-card:hover .card-img {
+  transform: scale(1.1);
+}
+
+.collection-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #154533;
+  /* Specific Dark Green from screenshot */
+  padding: 1rem 1.5rem;
+  color: white;
+  transform: translateY(35px);
+  /* Hide 'Shop Now' initially? Need to check hover interaction */
+  /* Based on screenshot, title is uppercase white. Shop Now appears below. */
+  /* Let's make it fixed size or auto. */
+  transition: transform 0.4s ease;
+  width: 90%;
+  /* Leaves a gap, maybe? Screenshot shows full width but maybe padding layout? */
+  /* Actually looks like the box is full width of the card, or aligned. */
+  width: 100%;
+}
+
+/* Hover effect: Slide up slightly to reveal "Shop Now" or just color change? */
+/* Screenshot 2 shows "Shop Now ->" visible on the 'Pet Friendly' card (2nd). 
+   This implies a hover state or active state. Let's assume on hover it slides up or just stays visible.
+   Let's assume the box is ALWAYS visible with title, but expands to show link? 
+   Or link is part of it. Let's try transform upwards method.
+*/
+
+.collection-card:hover .collection-overlay {
+  transform: translateY(0);
+}
+
+.collection-overlay .card-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.shop-link {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0;
+  /* Hidden by default */
+  transform: translateY(10px);
+  transition: all 0.3s ease 0.1s;
+  /* Slight delay */
+}
+
+.collection-card:hover .shop-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .collection-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .collection-card {
+    height: 400px;
+  }
+
+  .collection-overlay {
+    transform: translateY(0);
+  }
+
+  .shop-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

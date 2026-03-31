@@ -1,0 +1,108 @@
+.faq-img {
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 600px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.custom-accordion .accordion-item {
+    border: none;
+    border-bottom: 1px solid #eee;
+    background-color: transparent;
+}
+
+.custom-accordion .accordion-button {
+    background-color: #F9F8F6;
+    /* BG Off-white */
+    color: #0c5b47;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 1.5rem 1rem;
+    box-shadow: none;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: #F8B864;
+    /* Vibrant Orange */
+    color: #fff;
+    font-weight: 700;
+}
+
+.custom-accordion .accordion-button::after {
+    filter: grayscale(100%);
+}
+
+.custom-accordion .accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1);
+}
+
+.custom-accordion .accordion-body {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    line-height: 1.8;
+    padding: 1.5rem;
+}
+
+.faq-column-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #0c5b47;
+    font-size: 1.8rem;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+.custom-accordion .accordion-button {
+    background-color: #F9F8F6;
+    color: #0c5b47;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 1.25rem 1.5rem;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.custom-accordion .accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    background-color: #F9F8F6;
+}
+
+.faq-cta-section {
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.faq-cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(12, 91, 71, 0.7);
+    /* Dark green overlay */
+    z-index: 1;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .cta-title {
+        font-size: 2.2rem;
+    }
+}

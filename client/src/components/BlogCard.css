@@ -1,0 +1,96 @@
+.blog-card-v2 {
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.blog-card-link {
+    display: block;
+    color: inherit !important;
+}
+
+.blog-image-wrapper {
+    position: relative;
+    border-radius: 0;
+    width: 100%;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+}
+
+.blog-img-v3 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.blog-card-v2:hover .blog-img-v3 {
+    transform: scale(1.1);
+}
+
+.blog-tag-v2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #7bae40;
+    /* Theme Orange */
+    color: #fff;
+    padding: 6px 18px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 2;
+}
+
+.blog-info-meta {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85rem;
+    color: #8da08e;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.blog-title-v3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0c5b47;
+    line-height: 1.25;
+    transition: color 0.3s ease;
+}
+
+.blog-card-v2:hover .blog-title-v3 {
+    color: #7bae40;
+}
+
+.blog-summary-v2 {
+    font-family: 'Jost', sans-serif;
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.blog-read-more {
+    font-family: 'Jost', sans-serif;
+    color: #0c5b47;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.blog-card-v2:hover .blog-read-more {
+    color: #7bae40;
+    transform: translateX(10px);
+}
+
+@media (max-width: 991px) {
+    .blog-title-v3 {
+        font-size: 1.5rem;
+    }
+}

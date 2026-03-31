@@ -1,0 +1,195 @@
+.hero-section-wrapper {
+  height: 600px;
+  /* Specific height for split layout */
+  overflow: hidden;
+}
+
+/* Left Column */
+.hero-left {
+  background-image: url('../assets/images/hero-bg.jpg');
+  /* Ensure this path is correct, or use public if preferred */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* Center vertically */
+  padding: 0 50px;
+}
+
+/* Fallback if image in assets processing weirdly, try standard public URL if needed */
+/* .hero-left { background-image: url('/images/hero-bg.jpg'); } */
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 40, 20, 0.60) 0%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 500px;
+  margin-left: 5%;
+}
+
+.hero-subtitle {
+  color: #F8B864;
+  /* Orange accent */
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.hero-desc {
+  color: #eee;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.btn-hero-shop {
+  background-color: #F8B864;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.btn-hero-shop:hover {
+  background-color: #e0a800;
+  transform: translateX(5px);
+  color: #fff;
+}
+
+/* Right Column */
+.hero-right {
+  background-color: #fff;
+  position: relative;
+}
+
+.hero-product-img {
+  height: 300px;
+  object-fit: contain;
+}
+
+.hero-sale-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.hero-product-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  text-transform: uppercase;
+}
+
+.btn-hero-cart {
+  background-color: #F8B864;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-hero-cart:hover {
+  background-color: #e0a800;
+}
+
+.hero-arrows {
+  color: #aaa;
+  cursor: pointer;
+}
+
+.arrow-icon:hover {
+  color: var(--primary-green);
+}
+
+/* Social Icons */
+.hero-social-icons {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-social-icons a {
+  color: #333;
+  transition: color 0.3s;
+}
+
+.hero-social-icons a:hover {
+  color: var(--primary-green);
+}
+
+@media (max-width: 768px) {
+  .hero-section-wrapper {
+    height: auto;
+  }
+
+  .hero-left {
+    height: auto;
+    min-height: 500px;
+    padding: 60px 20px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-content {
+    margin-left: 0;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-desc {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-right {
+    padding: 60px 20px;
+    height: auto;
+  }
+
+  .hero-social-icons {
+    display: none !important;
+  }
+
+  .hero-product-img {
+    height: 200px;
+  }
+}

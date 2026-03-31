@@ -1,0 +1,128 @@
+.team-about-v2 {
+    background-color: #fff;
+    padding: 100px 0;
+}
+
+.about-subtitle-v2 {
+    color: #F8B864;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.about-title-v2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.about-text-v2 {
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.badge-icon-v2 {
+    flex-shrink: 0;
+}
+
+.badge-title-v2 {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #1a1a1a;
+}
+
+.badge-desc-v2 {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.about-quote-v2 {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.quote-text-v2 {
+    font-style: italic;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.btn-stories-v2 {
+    background-color: #F8B864;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-stories-v2:hover {
+    background-color: #e2a550;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(248, 184, 100, 0.4);
+}
+
+.about-images-v2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.main-img-v2 {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.stats-badge-v2 {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    background-color: #0c3b2e;
+    color: #fff;
+    padding: 30px;
+    border-radius: 4px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.stats-number-v2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stats-number-v2 sup {
+    font-size: 1.5rem;
+    color: #F8B864;
+}
+
+.stats-label-v2 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    .about-title-v2 {
+        font-size: 2.2rem;
+    }
+    .about-images-v2 {
+        margin-top: 50px;
+    }
+}

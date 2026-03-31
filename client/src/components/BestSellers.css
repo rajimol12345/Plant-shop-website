@@ -1,0 +1,44 @@
+.best-sellers-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section-tag-v2 {
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: #8da08e;
+    font-weight: 500;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.section-title-v2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #0c5b47;
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+}
+
+.section-divider-v2 {
+    width: 60px;
+    height: 3px;
+    background-color: #7bae40;
+    margin: 0 auto;
+}
+
+.text-theme-orange {
+    color: #7bae40 !important;
+}
+
+@media (max-width: 991px) {
+    .section-title-v2 {
+        font-size: 2rem;
+    }
+
+    .best-sellers-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}

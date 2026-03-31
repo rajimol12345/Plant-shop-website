@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+.admin-dashboard {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9fa;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.serif-font {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 260px;
+    background-color: #1a2226;
+    /* Darker charcoal */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    position: fixed;
+    height: 100vh;
+    z-index: 1000;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.closed {
+    margin-left: -260px;
+}
+
+.sidebar-brand h3 {
+    color: #fff;
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+/* Sidebar Profile */
+.sidebar-profile {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 10px;
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    background-color: #ffc107;
+    /* Yellow theme color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    border: 3px solid #1a2226;
+    outline: 2px solid #28a745;
+}
+
+.online-dot {
+    color: #28a745;
+    font-size: 0.8rem;
+    margin-right: 3px;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.sidebar-menu li {
+    padding: 12px 25px;
+    color: #b8c7ce;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-menu li:hover,
+.sidebar-menu li.active {
+    background-color: #222d32;
+    color: #fff;
+    border-left: 3px solid #fff;
+}
+
+.menu-icon {
+    margin-right: 15px;
+    font-size: 1.1rem;
+    width: 20px;
+}
+
+/* Main Content Wrapper */
+.main-content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    transition: margin-left 0.3s ease;
+    width: 100%;
+    margin-left: 260px;
+    /* Default open */
+}
+
+.sidebar-closed .main-content-wrapper {
+    margin-left: 0;
+}
+
+/* Header Styles */
+.admin-header {
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #dee2e6;
+    padding: 0 20px;
+}
+
+.sidebar-toggle-btn {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.content-container {
+    padding: 30px;
+}
+
+/* Overview Cards */
+.overview-card {
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.overview-card:hover {
+    transform: translateY(-2px);
+}
+
+.icon-circle {
+    background-color: #f8f9fa;
+}
+
+
+/* Professional KPI Cards (Existing styles refined) */
+.kpi-card-professional {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.kpi-card-professional:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card-top {
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.card-bottom {
+    height: 45%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.card-split {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-split h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+}
+
+.card-split p {
+    font-size: 0.8rem;
+    margin: 0;
+    color: #777;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.bg-red {
+    background-color: #db4437;
+}
+
+.bg-yellow {
+    background-color: #f4b459;
+}
+
+.bg-green {
+    background-color: #4b6b55;
+}
+
+.bg-blue {
+    background-color: #009be0;
+}
+
+.border-right {
+    border-right: 1px solid #eee;
+}
+
+/* Professional Chart Card */
+.chart-card-professional {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    background-color: #fff;
+    padding: 20px;
+}
+
+.chart-card-professional .card-title {
+    font-size: 1.25rem;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-left: -260px;
+        /* Hide by default on mobile */
+    }
+
+    .sidebar.open {
+        margin-left: 0;
+    }
+
+    .main-content-wrapper {
+        margin-left: 0 !important;
+    }
+
+    .sidebar.open+.main-content-wrapper {
+        /* Optional: push content or overlay */
+    }
+}

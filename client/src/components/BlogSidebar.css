@@ -1,0 +1,80 @@
+.sidebar-widget {
+    margin-bottom: 40px;
+}
+
+.widget-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #0c5b47;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #F8B864;
+    display: inline-block;
+}
+
+.recent-post-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.recent-post-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.recent-post-link:hover .recent-post-title {
+    color: #E2935D;
+    text-decoration: none;
+}
+
+.recent-post-date {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.contact-widget {
+    background-color: #0c5b47;
+    border-radius: 8px;
+}
+
+.contact-widget .widget-title {
+    color: #fff;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    display: block;
+    text-align: center;
+}
+
+.category-link {
+    color: #666;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.category-link:hover {
+    color: #E2935D;
+    padding-left: 5px;
+}
+
+.cat-count {
+    color: #E2935D;
+}
+
+.blog-sidebar {
+    border-left: 1px solid #eee;
+}
+
+@media (max-width: 991px) {
+    .blog-sidebar {
+        border-left: none;
+        margin-top: 50px;
+        padding-left: 0 !important;
+    }
+}

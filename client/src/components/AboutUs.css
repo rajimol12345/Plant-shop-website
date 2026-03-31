@@ -1,0 +1,235 @@
+.about-us-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.about-subtitle {
+  font-family: 'Jost', sans-serif;
+  letter-spacing: 2px;
+  font-size: 16px;
+  color: #007a8c;
+  font-weight: 500;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.about-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #0c5b47;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.about-divider {
+  width: 100px;
+  height: 3px;
+  background-color: #f8b864;
+  margin-bottom: 35px;
+}
+
+.about-desc {
+  font-family: 'Jost', sans-serif;
+  color: #777;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 100%;
+}
+
+.feature-item-v2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.feature-icon-wrapper {
+  color: #f8b864;
+  padding-top: 5px;
+}
+
+.feature-name {
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #0c5b47;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.feature-sub {
+  font-family: 'Jost', sans-serif;
+  color: #888;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.about-quote-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.quote-marks {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #f8b864;
+  opacity: 0.8;
+}
+
+.about-quote-text {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1rem;
+  color: #007a8c;
+  font-weight: 500;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.btn-stories {
+  background-color: #f8b864;
+  color: #fff;
+  border: none;
+  padding: 15px 45px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s;
+  box-shadow: 0 10px 20px rgba(248, 184, 100, 0.2);
+}
+
+.btn-stories:hover {
+  background-color: #0c5b47;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(29, 41, 33, 0.2);
+}
+
+/* Final Composition - 2 Layers */
+.about-composition-final {
+  position: relative;
+  height: 600px;
+  width: 100%;
+}
+
+.composition-bg-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height: 85%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.composition-bg-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.composition-fg-frame {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 60%;
+  height: 80%;
+  z-index: 2;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  /* Optional border/frame effect */
+  padding: 10px;
+}
+
+.main-fg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience-badge-darker {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  /* Aligns with the left edge of the styling, or slightly overlap */
+  background-color: #0c5b47;
+  color: #fff;
+  padding: 40px 30px;
+  z-index: 3;
+  min-width: 220px;
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.exp-num {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.exp-num .plus {
+  font-size: 2rem;
+  vertical-align: top;
+  margin-left: 2px;
+  color: #fff;
+}
+
+.exp-label {
+  display: block;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.9;
+}
+
+@media (max-width: 991px) {
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .about-composition-final {
+    height: 400px;
+    margin-top: 40px;
+  }
+
+  .composition-bg-layer {
+    width: 60%;
+    left: 0;
+  }
+
+  .composition-fg-frame {
+    width: 90%;
+    height: 90%;
+  }
+
+  .experience-badge-darker {
+    padding: 20px 15px;
+    min-width: 150px;
+    bottom: -15px;
+    left: 5px;
+  }
+
+  .exp-num {
+    font-size: 2.2rem;
+  }
+}

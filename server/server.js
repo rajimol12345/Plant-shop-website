@@ -46,8 +46,18 @@ app.use(helmet({
 }));
 app.use(cors({
   origin: "https://plant-shop-website-2026.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+
+// Extra safety manual headers
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://plant-shop-website-2026.onrender.com");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
+
 app.use(express.json());
 
 if (process.env.NODE_ENV === 'development') {

@@ -27,6 +27,7 @@ connectDB();
 
 const app = express();
 const server = http.createServer(app);
+
 const allowedOrigins = process.env.ALLOWED_ORIGINS 
   ? process.env.ALLOWED_ORIGINS.split(',').map(o => o.trim()) 
   : ['https://plant-shop-website-2026.onrender.com', 'http://localhost:3000', 'http://localhost:3001'];
@@ -41,23 +42,30 @@ const io = new Server(server, {
 
 app.set('socketio', io);
 
-app.use(helmet({
-  crossOriginResourcePolicy: false,
-}));
+// 1. TOP-LEVEL CORS (Before anything else)
 app.use(cors({
   origin: "https://plant-shop-website-2026.onrender.com",
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }));
 
-// Extra safety manual headers
+// 2. EXTRA SAFETY MANUAL HEADERS + OPTIONS HANDLER
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "https://plant-shop-website-2026.onrender.com");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  res.header("Access-Control-Allow-Credentials", "true");
+  
+  if (req.method === 'OPTIONS') {
+    return res.status(200).json({});
+  }
   next();
 });
 
+// 3. OTHER MIDDLEWARE
+app.use(helmet({
+  crossOriginResourcePolicy: false,
+}));
 app.use(express.json());
 
 if (process.env.NODE_ENV === 'development') {

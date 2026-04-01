@@ -120,7 +120,8 @@
     position: relative;
 }
 
-.desktop-links a {
+.desktop-links a,
+.nav-link-btn {
     text-decoration: none;
     color: var(--primary-green);
     font-weight: 500;
@@ -131,14 +132,23 @@
     gap: 4px;
     transition: color 0.2s ease;
     white-space: nowrap;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    outline: none;
 }
 
 .desktop-links a:hover,
-.desktop-links a.active {
+.desktop-links a.active,
+.nav-link-btn:hover,
+.nav-link-btn.active {
     color: var(--accent-orange);
 }
 
-.desktop-links a.active svg {
+.desktop-links a.active svg,
+.nav-link-btn.active svg {
     color: var(--accent-orange);
 }
 

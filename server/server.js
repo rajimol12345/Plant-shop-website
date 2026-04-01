@@ -45,17 +45,7 @@ app.use(helmet({
   crossOriginResourcePolicy: false,
 }));
 app.use(cors({
-  origin: function (origin, callback) {
-    // allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      // If the origin is not in allowedOrigins, we still allow it but without credentials if it's a public API
-      // However, for this project we want to be strict with credentials.
-      // If we want to support multiple subdomains dynamically:
-      return callback(null, true); 
-    }
-    return callback(null, true);
-  },
+  origin: "https://plant-shop-website-2026.onrender.com",
   credentials: true
 }));
 app.use(express.json());

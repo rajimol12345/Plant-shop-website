@@ -10,8 +10,8 @@ import {
     ResponsiveContainer
 } from 'recharts';
 import {
-    FaHome, FaShoppingCart, FaTh, FaChartLine, FaExclamationTriangle,
-    FaClock, FaCheckCircle, FaTags, FaBars, FaBox, FaUsers, FaClipboardList, FaDollarSign, FaBlog, FaSignOutAlt, FaComments
+    FaHome, FaShoppingCart, FaExclamationTriangle,
+    FaClock, FaCheckCircle, FaBars, FaBox, FaUsers, FaClipboardList, FaDollarSign, FaBlog, FaSignOutAlt, FaComments
 } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';

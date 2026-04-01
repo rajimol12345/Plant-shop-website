@@ -1,7 +1,7 @@
 import React from 'react';
-import { ListGroup, Card } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { HiOutlineMail, HiOutlinePhone, HiChevronRight } from 'react-icons/hi';
+import { HiOutlineMail, HiOutlinePhone } from 'react-icons/hi';
 import { FaChevronRight } from 'react-icons/fa';
 import './BlogSidebar.css';
 

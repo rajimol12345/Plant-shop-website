@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { ChevronLeft, ChevronRight, ShoppingCart, ArrowRight } from 'lucide-react';
 import { FaFacebookF, FaInstagram, FaPinterestP, FaYoutube } from 'react-icons/fa';
 import { listProducts } from '../actions/productActions';

@@ -3,12 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { motion } from 'framer-motion';
-import { HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker, HiOutlineHome } from 'react-icons/hi';
+import { HiOutlineMail, HiOutlinePhone, HiOutlineHome } from 'react-icons/hi';
 import { FaFacebookF, FaTwitter, FaInstagram, FaPinterestP } from 'react-icons/fa';
-import PageHeader from '../components/PageHeader';
 import { createContact } from '../actions/contactActions';
 import { CONTACT_CREATE_RESET } from '../constants/contactConstants';
-import Loader from '../components/Loader';
 import './ContactScreen.css';
 
 const ContactScreen = () => {

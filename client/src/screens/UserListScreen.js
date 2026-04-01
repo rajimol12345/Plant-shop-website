@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
-import { LinkContainer } from 'react-router-bootstrap';
 import { Table, Button, Container } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { FaCheck, FaTimes, FaTrash, FaEdit } from 'react-icons/fa';
+import { FaCheck, FaTimes, FaTrash } from 'react-icons/fa';
 import { listUsers, deleteUser } from '../actions/userActions';
 import { useNavigate } from 'react-router-dom';
 
@@ -33,10 +32,6 @@ const UserListScreen = () => {
         }
     };
 
-    const getInitials = (name) => {
-        return name ? name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2) : '??';
-    };
-
     return (
         <Container className="py-5">
             <h2 className="mb-4" style={{ fontFamily: 'Playfair Display' }}>Users</h2>
@@ -49,7 +44,6 @@ const UserListScreen = () => {
                     <thead style={{ backgroundColor: '#0c5b47', color: 'white' }}>
                         <tr>
                             <th>ID</th>
-                            <th>IMAGE</th>
                             <th>NAME</th>
                             <th>EMAIL</th>
                             <th>ADMIN</th>

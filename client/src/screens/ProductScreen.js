@@ -7,14 +7,12 @@ import { openChatWithMessage } from '../actions/chatActions';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Product from '../components/Product';
-import { Search, Star, MessageSquare } from 'lucide-react';
+import { Search, MessageSquare } from 'lucide-react';
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants';
 import './ProductScreen.css';
 
 const ProductScreen = () => {
     const [qty, setQty] = useState(1);
-    const [activeTab, setActiveTab] = useState('reviews'); // Default to reviews as per screenshot often or standard
-    // Actually screenshot shows 'Reviews (0)' as a tab.
 
     const [rating, setRating] = useState(0);
     const [comment, setComment] = useState('');
@@ -30,7 +28,7 @@ const ProductScreen = () => {
     const { userInfo } = userLogin;
 
     const productReviewCreate = useSelector((state) => state.productReviewCreate);
-    const { success: successProductReview, error: errorProductReview } = productReviewCreate;
+    const { success: successProductReview } = productReviewCreate;
 
     const productList = useSelector((state) => state.productList);
     const { products } = productList;

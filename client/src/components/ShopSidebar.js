@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, ListGroup, Button } from 'react-bootstrap';
+import { Form, ListGroup } from 'react-bootstrap';
 import { Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './ShopSidebar.css';

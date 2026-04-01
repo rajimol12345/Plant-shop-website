@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './ShopPromo.css';
 

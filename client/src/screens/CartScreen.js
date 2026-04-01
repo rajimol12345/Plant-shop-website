@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
 import { Link, useParams, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { Row, Col, ListGroup, Image, Form, Button, Card, Container } from 'react-bootstrap';
+import { Row, Col, Image, Button, Card, Container } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { FiTrash2, FiPlus, FiMinus, FiShoppingBag, FiArrowRight } from 'react-icons/fi';
-import Message from '../components/Message';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import './CartScreen.css';
 

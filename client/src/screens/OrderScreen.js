@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Row, Col, ListGroup, Image, Card, Button, Container } from 'react-bootstrap';
 import { motion } from 'framer-motion';
@@ -19,7 +19,7 @@ const OrderScreen = () => {
     const { userInfo } = userLogin;
 
     const orderDeliver = useSelector((state) => state.orderDeliver);
-    const { loading: loadingDeliver, success: successDeliver } = orderDeliver;
+    const { success: successDeliver } = orderDeliver;
 
     const orderPay = useSelector((state) => state.orderPay);
     const { loading: loadingPay, success: successPay } = orderPay;

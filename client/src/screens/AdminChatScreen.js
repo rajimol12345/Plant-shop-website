@@ -24,7 +24,7 @@ const AdminChatScreen = () => {
     const { loading: loadingList, error: errorList, chats } = chatAdminList;
 
     const chatHistory = useSelector((state) => state.chatHistory);
-    const { loading: loadingHistory, error: errorHistory, messages, chatId, unreadCount } = chatHistory;
+    const { loading: loadingHistory, messages, chatId, unreadCount } = chatHistory;
 
     useEffect(() => {
         if (userInfo && userInfo.isAdmin) {

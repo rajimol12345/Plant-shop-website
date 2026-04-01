@@ -6,7 +6,6 @@ import { ArrowRight, Award, Wallet } from 'lucide-react';
 import './AboutUs.css';
 
 // Asset paths
-const aboutMain = '/images/about-us.jpg';
 const bgLeaves = '/images/about-bg-leaves.jpg'; // New asset
 const bgWoman = '/images/about-bg-woman.png';   // New asset
 

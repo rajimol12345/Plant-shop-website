@@ -112,7 +112,7 @@ const ChatWidget = () => {
         const handleClick = () => closeContextMenu();
         document.addEventListener('click', handleClick);
         return () => document.removeEventListener('click', handleClick);
-    }, [contextMenu]);
+    }, [closeContextMenu]);
 
     // Undo State
     const [undoToast, setUndoToast] = useState({ visible: false, messageId: null, timerId: null });

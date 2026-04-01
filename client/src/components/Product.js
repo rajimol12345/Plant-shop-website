@@ -1,15 +1,12 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../actions/cartActions';
-import Rating from './Rating';
-import { FiShoppingCart, FiEye } from 'react-icons/fi';
 import './Product.css';
 
 const Product = ({ product }) => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const addToCartHandler = (e) => {
     e.preventDefault();

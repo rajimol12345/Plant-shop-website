@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap';
 import BlogCard from '../components/BlogCard';
 import BlogSidebar from '../components/BlogSidebar';
-import PageHeader from '../components/PageHeader';
 import { listBlogs } from '../actions/blogActions';
 import Newsletter from '../components/Newsletter';
 import Message from '../components/Message';

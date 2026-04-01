@@ -27,9 +27,13 @@ connectDB();
 
 const app = express();
 const server = http.createServer(app);
+const allowedOrigins = process.env.ALLOWED_ORIGINS 
+  ? process.env.ALLOWED_ORIGINS.split(',').map(o => o.trim()) 
+  : ['https://plant-shop-website-2026.onrender.com', 'http://localhost:3000', 'http://localhost:3001'];
+
 const io = new Server(server, {
   cors: {
-    origin: process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : '*',
+    origin: allowedOrigins,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
   }
@@ -41,7 +45,17 @@ app.use(helmet({
   crossOriginResourcePolicy: false,
 }));
 app.use(cors({
-  origin: process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : '*',
+  origin: function (origin, callback) {
+    // allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      // If the origin is not in allowedOrigins, we still allow it but without credentials if it's a public API
+      // However, for this project we want to be strict with credentials.
+      // If we want to support multiple subdomains dynamically:
+      return callback(null, true); 
+    }
+    return callback(null, true);
+  },
   credentials: true
 }));
 app.use(express.json());

@@ -34,7 +34,7 @@ const ChatWidget = () => {
 
     useEffect(() => {
         if (userInfo && !userInfo.isAdmin) {
-            const newSocket = io('http://localhost:5000');
+            const newSocket = io(`${process.env.REACT_APP_API_URL}`);
             setSocket(newSocket);
 
             newSocket.emit('join_chat', userInfo._id);

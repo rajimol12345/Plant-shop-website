@@ -28,7 +28,7 @@ const AdminChatScreen = () => {
 
     useEffect(() => {
         if (userInfo && userInfo.isAdmin) {
-            const newSocket = io('http://localhost:5000');
+            const newSocket = io(`${process.env.REACT_APP_API_URL}`);
             setSocket(newSocket);
 
             newSocket.on('receive_message', (msg) => {
@@ -130,7 +130,7 @@ const AdminChatScreen = () => {
                                                 <div className="d-flex align-items-center">
                                                     <div className={`avatar-circle me-3 bg-theme-light d-flex align-items-center justify-content-center text-theme-green fw-bold ${selectedUser && selectedUser._id === chat.user._id ? 'border-light text-white' : ''}`} style={{ overflow: 'hidden' }}>
                                                         {chat.user.image ? (
-                                                            <img src={`http://localhost:5000${chat.user.image}`} alt={chat.user.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                                            <img src={`${process.env.REACT_APP_API_URL}${chat.user.image}`} alt={chat.user.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                                         ) : (
                                                             getInitials(chat.user.name)
                                                         )}
@@ -167,7 +167,7 @@ const AdminChatScreen = () => {
                                 <div className="chat-active-header d-flex align-items-center p-4 border-bottom bg-white shadow-sm z-index-10">
                                     <div className="avatar-circle md me-3 bg-theme-green text-white d-flex align-items-center justify-content-center fw-bold" style={{ overflow: 'hidden' }}>
                                         {selectedUser.image ? (
-                                            <img src={`http://localhost:5000${selectedUser.image}`} alt={selectedUser.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            <img src={`${process.env.REACT_APP_API_URL}${selectedUser.image}`} alt={selectedUser.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                         ) : (
                                             getInitials(selectedUser.name)
                                         )}
@@ -182,7 +182,7 @@ const AdminChatScreen = () => {
                                     <div className="header-actions">
                                         <Button variant="link" className="text-muted p-2" style={{ overflow: 'hidden', width: '40px', height: '40px', borderRadius: '50%', padding: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                             {selectedUser.image ? (
-                                                <img src={`http://localhost:5000${selectedUser.image}`} alt={selectedUser.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                                <img src={`${process.env.REACT_APP_API_URL}${selectedUser.image}`} alt={selectedUser.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                             ) : (
                                                 <FaUserCircle size={20} />
                                             )}
@@ -203,7 +203,7 @@ const AdminChatScreen = () => {
                                                     {msg.senderRole !== 'admin' && (
                                                         <div className="avatar-circle sm me-2 bg-theme-light d-flex align-items-center justify-content-center text-theme-green fw-bold" style={{ width: '35px', height: '35px', minWidth: '35px', overflow: 'hidden', borderRadius: '50%' }}>
                                                             {selectedUser.image ? (
-                                                                <img src={`http://localhost:5000${selectedUser.image}`} alt={selectedUser.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                                                <img src={`${process.env.REACT_APP_API_URL}${selectedUser.image}`} alt={selectedUser.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                                             ) : (
                                                                 getInitials(selectedUser.name)
                                                             )}

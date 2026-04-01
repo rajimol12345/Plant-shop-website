@@ -68,7 +68,7 @@ const UserListScreen = () => {
                     <div className="avatar-circle shadow-sm" style={{ width: '40px', height: '40px', borderRadius: '50%', overflow: 'hidden', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       {user.image ? (
                         <img
-                          src={`http://localhost:5000${user.image}`}
+                          src={`${process.env.REACT_APP_API_URL}${user.image}`}
                           alt={user.name}
                           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                           onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }}

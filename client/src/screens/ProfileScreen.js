@@ -71,7 +71,7 @@ const ProfileScreen = () => {
         },
       };
 
-      const { data } = await axios.post('http://localhost:5000/api/upload', formData, config);
+      const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/api/upload`, formData, config);
 
       setImage(data);
       setUploading(false);
@@ -169,7 +169,7 @@ const ProfileScreen = () => {
                       <div className="mt-3 text-center text-md-start">
                         <p className="small fw-bold text-muted mb-2 text-uppercase letter-spacing-1">Image Preview</p>
                         <img
-                          src={`http://localhost:5000${image}`}
+                          src={`${process.env.REACT_APP_API_URL}${image}`}
                           alt="Profile Preview"
                           className="shadow-sm"
                           style={{

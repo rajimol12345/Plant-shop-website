@@ -29,7 +29,7 @@ const AdminChatWidget = () => {
 
     useEffect(() => {
         if (userInfo && userInfo.isAdmin) {
-            const newSocket = io('http://localhost:5000');
+            const newSocket = io(`${process.env.REACT_APP_API_URL}`);
             setSocket(newSocket);
 
             newSocket.on('receive_message', (msg) => {
@@ -119,7 +119,7 @@ const AdminChatWidget = () => {
                                 </button>
                                 {selectedUser.image ? (
                                     <img
-                                        src={`http://localhost:5000${selectedUser.image}`}
+                                        src={`${process.env.REACT_APP_API_URL}${selectedUser.image}`}
                                         alt={selectedUser.name}
                                         className="ms-2 rounded-circle object-fit-cover"
                                         style={{ width: '35px', height: '35px' }}
@@ -153,7 +153,7 @@ const AdminChatWidget = () => {
                                             >
                                                 {chat.user.image ? (
                                                     <img
-                                                        src={`http://localhost:5000${chat.user.image}`}
+                                                        src={`${process.env.REACT_APP_API_URL}${chat.user.image}`}
                                                         alt={chat.user.name}
                                                         className="me-2 rounded-circle object-fit-cover"
                                                         style={{ width: '30px', height: '30px' }}

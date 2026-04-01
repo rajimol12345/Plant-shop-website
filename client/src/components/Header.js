@@ -117,7 +117,7 @@ const Header = () => {
                 <>
                   {userInfo.image ? (
                     <img
-                      src={`http://localhost:5000${userInfo.image}`}
+                      src={`${process.env.REACT_APP_API_URL}${userInfo.image}`}
                       alt={userInfo.name}
                       style={{
                         width: '35px',

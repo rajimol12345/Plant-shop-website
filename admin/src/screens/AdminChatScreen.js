@@ -34,7 +34,7 @@ const AdminChatScreen = () => {
 
     useEffect(() => {
         if (userInfo && userInfo.isAdmin) {
-            const newSocket = io('http://localhost:5000');
+            const newSocket = io(`${process.env.REACT_APP_API_URL}`);
             setSocket(newSocket);
 
             newSocket.on('receive_message', (msg) => {
@@ -216,7 +216,7 @@ const AdminChatScreen = () => {
                                                 <div className="d-flex align-items-center">
                                                     <div className={`avatar-circle md me-3 d-flex align-items-center justify-content-center fw-bold ${selectedUser && selectedUser._id === chat.user._id ? 'bg-white text-theme-green' : 'bg-theme-green text-white'}`} style={{ overflow: 'hidden' }}>
                                                         {chat.user.image ? (
-                                                            <img src={`http://localhost:5000${chat.user.image}`} alt={chat.user.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                                            <img src={`${process.env.REACT_APP_API_URL}${chat.user.image}`} alt={chat.user.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                                         ) : (
                                                             getInitials(chat.user.name)
                                                         )}
@@ -254,7 +254,7 @@ const AdminChatScreen = () => {
                                     <div className="d-flex align-items-center">
                                         <div className="avatar-circle md me-3 bg-theme-green text-white d-flex align-items-center justify-content-center fw-bold" style={{ overflow: 'hidden' }}>
                                             {selectedUser.image ? (
-                                                <img src={`http://localhost:5000${selectedUser.image}`} alt={selectedUser.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                                <img src={`${process.env.REACT_APP_API_URL}${selectedUser.image}`} alt={selectedUser.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                             ) : (
                                                 getInitials(selectedUser.name)
                                             )}
@@ -289,7 +289,7 @@ const AdminChatScreen = () => {
                                                     {msg.senderRole !== 'admin' && (
                                                         <div className="message-avatar me-2" style={{ width: '32px', height: '32px', borderRadius: '50%', overflow: 'hidden', flexShrink: 0 }}>
                                                             {selectedUser.image ? (
-                                                                <img src={`http://localhost:5000${selectedUser.image}`} alt={selectedUser.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                                                <img src={`${process.env.REACT_APP_API_URL}${selectedUser.image}`} alt={selectedUser.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                                             ) : (
                                                                 <div className="bg-theme-green text-white d-flex align-items-center justify-content-center h-100 w-100" style={{ fontSize: '10px' }}>
                                                                     {getInitials(selectedUser.name)}

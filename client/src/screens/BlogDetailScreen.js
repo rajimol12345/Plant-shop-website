@@ -146,9 +146,9 @@ const BlogDetailScreen = () => {
                                         <div className="post-share-v2 d-flex align-items-center">
                                             <span className="fw-bold me-3">Share this :</span>
                                             <div className="d-flex gap-2">
-                                                <a href="#" className="share-btn-v2"><FaFacebookF /></a>
-                                                <a href="#" className="share-btn-v2"><FaTwitter /></a>
-                                                <a href="#" className="share-btn-v2"><FaPinterestP /></a>
+                                                <button className="share-btn-v2"><FaFacebookF /></button>
+                                                <button className="share-btn-v2"><FaTwitter /></button>
+                                                <button className="share-btn-v2"><FaPinterestP /></button>
                                             </div>
                                         </div>
                                     </div>

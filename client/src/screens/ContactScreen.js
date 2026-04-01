@@ -130,10 +130,10 @@ const ContactScreen = () => {
                                     <h5 className="fw-bold mb-3" style={{ fontSize: '1.2rem' }}>SOCIAL MEDIA</h5>
                                     <p className="text-muted small mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                                     <div className="d-flex gap-3">
-                                        <a href="#" className="social-icon-btn"><FaFacebookF /></a>
-                                        <a href="#" className="social-icon-btn"><FaTwitter /></a>
-                                        <a href="#" className="social-icon-btn"><FaInstagram /></a>
-                                        <a href="#" className="social-icon-btn"><FaPinterestP /></a>
+                                        <button className="social-icon-btn"><FaFacebookF /></button>
+                                        <button className="social-icon-btn"><FaTwitter /></button>
+                                        <button className="social-icon-btn"><FaInstagram /></button>
+                                        <button className="social-icon-btn"><FaPinterestP /></button>
                                     </div>
                                 </div>
                             </motion.div>

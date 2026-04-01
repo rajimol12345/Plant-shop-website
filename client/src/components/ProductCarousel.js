@@ -101,10 +101,10 @@ const ProductCarousel = () => {
 
                         {/* Social Sidebar */}
                         <div className="social-sidebar">
-                            <a href="#"><FaFacebookF /></a>
-                            <a href="#"><FaInstagram /></a>
-                            <a href="#"><FaPinterestP /></a>
-                            <a href="#"><FaYoutube /></a>
+                            <button type="button" aria-label="Facebook"><FaFacebookF /></button>
+                            <button type="button" aria-label="Instagram"><FaInstagram /></button>
+                            <button type="button" aria-label="Pinterest"><FaPinterestP /></button>
+                            <button type="button" aria-label="Youtube"><FaYoutube /></button>
                         </div>
                     </Col>
                 </Row>

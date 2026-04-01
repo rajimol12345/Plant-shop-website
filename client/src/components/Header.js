@@ -89,9 +89,9 @@ const Header = () => {
               </Link>
             </li>
             <li className="has-dropdown">
-              <Link to="#" className={location.pathname === '/team' || location.pathname === '/faq' ? 'active' : ''}>
+              <button className={`nav-link-btn ${location.pathname === '/team' || location.pathname === '/faq' ? 'active' : ''}`}>
                 Pages <ChevronDown size={14} />
-              </Link>
+              </button>
               <ul className="dropdown-menu-v2">
                 <li><Link to="/team">Team</Link></li>
                 <li><Link to="/faq">FAQ</Link></li>

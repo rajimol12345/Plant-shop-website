@@ -9,7 +9,7 @@ const FAQScreen = () => {
     const dispatch = useDispatch();
 
     const blogList = useSelector((state) => state.blogList);
-    const { loading, blogs } = blogList;
+    const { blogs } = blogList;
 
     useEffect(() => {
         dispatch(listBlogs());

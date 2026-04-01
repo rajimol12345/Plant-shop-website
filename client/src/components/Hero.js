@@ -68,10 +68,10 @@ const Hero = () => {
 
           {/* Social Icons Sidebar */}
           <div className="hero-social-icons d-none d-md-flex flex-column gap-3">
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaPinterest /></a>
-            <a href="#"><FaYoutube /></a>
+            <button type="button" aria-label="Facebook"><FaFacebookF /></button>
+            <button type="button" aria-label="Instagram"><FaInstagram /></button>
+            <button type="button" aria-label="Pinterest"><FaPinterest /></button>
+            <button type="button" aria-label="Youtube"><FaYoutube /></button>
           </div>
         </Col>
       </Row>

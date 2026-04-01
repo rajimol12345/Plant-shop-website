@@ -290,13 +290,17 @@
     gap: 20px;
 }
 
-.social-sidebar a {
+.social-sidebar button {
+    background: none;
+    border: none;
+    padding: 0;
     color: var(--pc-green);
     font-size: 1.2rem;
     transition: color 0.2s;
+    cursor: pointer;
 }
 
-.social-sidebar a:hover {
+.social-sidebar button:hover {
     color: var(--pc-orange);
 }
 

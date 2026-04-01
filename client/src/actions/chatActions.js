@@ -7,9 +7,7 @@ import {
     CHAT_ADMIN_LIST_SUCCESS,
     CHAT_ADMIN_LIST_FAIL,
     CHAT_MESSAGE_RECEIVED,
-    CHAT_MARK_READ_REQUEST,
     CHAT_MARK_READ_SUCCESS,
-    CHAT_MARK_READ_FAIL,
     CHAT_OPEN_WITH_MESSAGE,
     CHAT_CLOSE,
     CHAT_MESSAGE_DELETE,
@@ -87,8 +85,6 @@ export const receiveMessage = (message) => (dispatch) => {
 
 export const markAsRead = (chatId) => async (dispatch, getState) => {
     try {
-        dispatch({ type: CHAT_MARK_READ_REQUEST });
-
         const {
             userLogin: { userInfo },
         } = getState();
@@ -103,13 +99,7 @@ export const markAsRead = (chatId) => async (dispatch, getState) => {
 
         dispatch({ type: CHAT_MARK_READ_SUCCESS });
     } catch (error) {
-        dispatch({
-            type: CHAT_MARK_READ_FAIL,
-            payload:
-                error.response && error.response.data.message
-                    ? error.response.data.message
-                    : error.message,
-        });
+        console.error('Mark as read failed:', error);
     }
 };
 // @desc    Admin reply to chat

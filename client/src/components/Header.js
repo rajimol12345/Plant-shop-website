@@ -69,8 +69,14 @@ const Header = () => {
       {/* Main Navigation */}
       <nav className="main-nav">
         <div className="container nav-content">
+          {/* Logo - LEFT */}
+          <Link to="/" className="logo-container text-decoration-none">
+            <div className="d-flex align-items-center gap-2">
+              <img src={logo} alt="Greenova" className="brand-logo-img" />
+            </div>
+          </Link>
 
-          {/* Desktop Links - LEFT/CENTER */}
+          {/* Desktop Links - CENTER */}
           <ul className="desktop-links">
             <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
             <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link></li>
@@ -97,7 +103,7 @@ const Header = () => {
             <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
           </ul>
 
-          {/* Right Icons - CENTER/RIGHT */}
+          {/* Right Icons - RIGHT */}
           <div className="nav-icons">
             <button className="icon-btn search-trigger" onClick={() => setSearchOpen(true)}>
               <Search size={20} strokeWidth={2} />
@@ -146,13 +152,6 @@ const Header = () => {
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
-
-          {/* Logo - RIGHT */}
-          <Link to="/" className="logo-container text-decoration-none">
-            <div className="d-flex align-items-center gap-2">
-              <img src={logo} alt="Greenova" className="brand-logo-img" />
-            </div>
-          </Link>
         </div>
       </nav>
 

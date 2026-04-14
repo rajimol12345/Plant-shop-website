@@ -68,7 +68,7 @@ const Header = () => {
 
       {/* Main Navigation */}
       <nav className="main-nav">
-        <div className="container nav-content">
+        <div className="container-fluid nav-content">
           {/* Logo - LEFT */}
           <Link to="/" className="logo-container text-decoration-none">
             <div className="d-flex align-items-center gap-2">

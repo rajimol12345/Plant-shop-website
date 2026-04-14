@@ -82,7 +82,7 @@ const ProductListScreen = () => {
                   <td>
                     <div className="d-flex align-items-center">
                       <img
-                        src={product.image}
+                        src={product.image && (product.image.startsWith('http') || product.image.startsWith('data:')) ? product.image : `${process.env.REACT_APP_API_URL || ''}${product.image}`}
                         alt={product.name}
                         className="rounded me-3"
                         style={{ width: '45px', height: '45px', objectFit: 'cover', border: '1px solid #eee' }}

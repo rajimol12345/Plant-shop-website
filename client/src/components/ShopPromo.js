@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import womanImg from '../assets/images/about-bg-woman.png';
 import './ShopPromo.css';
 
 const ShopPromo = () => {
@@ -16,7 +17,7 @@ const ShopPromo = () => {
                                 <Link to="/shop" className="promo-link-v2">Shop Now &rarr;</Link>
                             </div>
                             <div className="promo-img-v2">
-                                <img src="/images/featured-house-plant.jpg" alt="House Plant" />
+                                <img src={`${process.env.REACT_APP_API_URL || ''}/images/featured-house-plant.jpg`} alt="House Plant" />
                             </div>
                         </div>
                     </Col>
@@ -28,7 +29,7 @@ const ShopPromo = () => {
                                 <Link to="/shop" className="promo-link-v2">Shop Now &rarr;</Link>
                             </div>
                             <div className="promo-img-v2">
-                                <img src="/images/about-bg-woman.png" alt="Table Plant Decor" />
+                                <img src={womanImg} alt="Table Plant Decor" />
                             </div>
                         </div>
                     </Col>

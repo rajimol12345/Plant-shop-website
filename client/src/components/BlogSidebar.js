@@ -30,7 +30,7 @@ const BlogSidebar = ({ recentPosts, categories }) => {
 
             {/* Questions Widget */}
             <div className="sidebar-widget mb-5 contact-widget p-4 text-center" style={{
-                background: 'linear-gradient(rgba(45, 62, 50, 0.8), rgba(45, 62, 50, 0.8)), url("/images/featured-house-plant.jpg") center/cover',
+                background: `linear-gradient(rgba(45, 62, 50, 0.8), rgba(45, 62, 50, 0.8)), url("${process.env.REACT_APP_API_URL || ''}/images/featured-house-plant.jpg") center/cover`,
                 borderRadius: '0',
                 padding: '40px 30px !important'
             }}>

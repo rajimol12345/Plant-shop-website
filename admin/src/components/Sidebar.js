@@ -34,7 +34,7 @@ const Sidebar = () => {
             <div className="sidebar-profile px-3 py-4 mb-2 text-center border-bottom border-light border-opacity-10">
                 <div className="avatar mb-2 mx-auto">
                     <img
-                        src={userInfo && userInfo.image ? userInfo.image : `https://ui-avatars.com/api/?name=${userInfo ? userInfo.name : 'Admin'}&background=random`}
+                        src={userInfo && userInfo.image ? (userInfo.image.startsWith('http') ? userInfo.image : `${process.env.REACT_APP_API_URL || ''}${userInfo.image}`) : `https://ui-avatars.com/api/?name=${userInfo ? userInfo.name : 'Admin'}&background=random`}
                         alt="Admin"
                         className="rounded-circle border border-2 border-success p-1"
                         style={{ width: '80px', height: '80px', objectFit: 'cover' }}

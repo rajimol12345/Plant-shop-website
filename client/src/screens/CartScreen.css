@@ -47,31 +47,100 @@
     color: #666;
 }
 
-.qty-select-v2 {
+.qty-selector-v2 {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.qty-btn {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
     border: 1px solid #ddd;
-    border-radius: 0;
-    padding: 8px 12px;
-    font-family: 'Outfit', sans-serif;
-    width: 80px;
-    background-color: #fff;
+    color: #333;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    padding: 0;
 }
 
-.qty-select-v2:focus {
-    outline: none;
-    border-color: #F8B864;
+.qty-btn:hover {
+    background: #0c5b47;
+    color: #fff;
+    border-color: #0c5b47;
 }
 
-.btn-remove-v2 {
-    background: none;
-    border: none;
-    color: #999;
+.qty-value {
+    min-width: 30px;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.remove-item-btn {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1.5px solid #333;
+    color: #333;
     transition: all 0.3s ease;
-    font-size: 1.2rem;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 0;
 }
 
-.btn-remove-v2:hover {
-    color: #ff4d4d;
-    transform: scale(1.1);
+.remove-item-btn:hover {
+    background: #ff4d4d;
+    color: #fff;
+    border-color: #ff4d4d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cart-item-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-item-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08) !important;
+}
+
+.item-image-box {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.cart-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-Greenova {
+    background-color: #0c5b47;
+    border-color: #0c5b47;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.btn-Greenova:hover {
+    background-color: #7bae40;
+    border-color: #7bae40;
+    transform: translateY(-2px);
 }
 
 .cart-summary-card {

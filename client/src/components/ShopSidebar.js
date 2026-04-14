@@ -76,7 +76,7 @@ const ShopSidebar = ({ keyword, setKeyword, category, setCategory, priceRange, s
 
             {/* Sale Banner */}
             <div className="sidebar-promo-banner-v2 mt-5">
-                <img src="/images/featured-gift-green.jpg" alt="Promo" className="promo-img-v2" />
+                <img src={`${process.env.REACT_APP_API_URL || ''}/images/featured-gift-green.jpg`} alt="Promo" className="promo-img-v2" />
                 <div className="promo-overlay-v2">
                     <span className="promo-tag-v2">ALL PRODUCT</span>
                     <h3 className="promo-title-v2">LAST CHANCE SALE</h3>

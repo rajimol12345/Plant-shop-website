@@ -4,10 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import './CollectionGrid.css';
 
 // Importing images (using public folder)
-const imgGift = '/images/featured-gift-green.jpg';
-const imgPet = '/images/featured-pet-friendly.jpg';
-const imgHouse = '/images/featured-house-plant.jpg';
-const imgAir = '/images/featured-air-purifying.jpg';
+const apiUrl = process.env.REACT_APP_API_URL || '';
+const imgGift = `${apiUrl}/images/featured-gift-green.jpg`;
+const imgPet = `${apiUrl}/images/featured-pet-friendly.jpg`;
+const imgHouse = `${apiUrl}/images/featured-house-plant.jpg`;
+const imgAir = `${apiUrl}/images/featured-air-purifying.jpg`;
 
 const collections = [
     { title: 'GIFT GREEN', image: imgGift },

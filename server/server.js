@@ -30,7 +30,7 @@ const server = http.createServer(app);
 
 const allowedOrigins = process.env.ALLOWED_ORIGINS 
   ? process.env.ALLOWED_ORIGINS.split(',').map(o => o.trim()) 
-  : ['https://plant-shop-website-2026.onrender.com', 'http://localhost:3000', 'http://localhost:3001'];
+  : ['https://plant-shop-website-2026.onrender.com', 'https://plant-shop-website-1.onrender.com', 'http://localhost:3000', 'http://localhost:3001'];
 
 const io = new Server(server, {
   cors: {
@@ -44,20 +44,26 @@ app.set('socketio', io);
 
 // 1. TOP-LEVEL CORS (Before anything else)
 app.use(cors({
-  origin: "https://plant-shop-website-2026.onrender.com",
+  origin: allowedOrigins,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }));
 
 // 2. EXTRA SAFETY MANUAL HEADERS + OPTIONS HANDLER
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://plant-shop-website-2026.onrender.com");
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.header("Access-Control-Allow-Origin", origin);
+  } else {
+    // Fallback to primary if not in list but still trying to hit API
+    res.header("Access-Control-Allow-Origin", "https://plant-shop-website-2026.onrender.com");
+  }
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, x-auth-token");
   res.header("Access-Control-Allow-Credentials", "true");
   
   if (req.method === 'OPTIONS') {
-    return res.status(200).json({});
+    return res.status(200).send();
   }
   next();
 });
@@ -130,12 +136,12 @@ io.on('connection', (socket) => {
 });
 
 // Keep production logs clean
-if (process.env.NODE_ENV !== 'production') {
-  app.use((req, res, next) => {
+app.use((req, res, next) => {
+  if (process.env.NODE_ENV !== 'production' || req.path.startsWith('/api')) {
     console.log(`${req.method} ${req.url}`);
-    next();
-  });
-}
+  }
+  next();
+});
 
 app.get('/', (req, res) => {
   res.send('API is running...');

@@ -44,26 +44,33 @@ app.set('socketio', io);
 
 // 1. TOP-LEVEL CORS (Before anything else)
 app.use(cors({
-  origin: allowedOrigins,
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like mobile apps or curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      console.log('Origin not allowed by CORS:', origin);
+      callback(null, false); // Don't block the request, but don't send CORS headers
+    }
+  },
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  credentials: true
+  credentials: true,
+  allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization", "x-auth-token"]
 }));
 
-// 2. EXTRA SAFETY MANUAL HEADERS + OPTIONS HANDLER
+// 2. MANUAL HEADER OVERRIDE (Only for those origins that need explicit echoing)
 app.use((req, res, next) => {
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.header("Access-Control-Allow-Origin", origin);
-  } else {
-    // Fallback to primary if not in list but still trying to hit API
-    res.header("Access-Control-Allow-Origin", "https://plant-shop-website-2026.onrender.com");
+    res.header("Access-Control-Allow-Credentials", "true");
   }
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, x-auth-token");
-  res.header("Access-Control-Allow-Credentials", "true");
   
   if (req.method === 'OPTIONS') {
-    return res.status(200).send();
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, x-auth-token");
+    return res.status(200).end();
   }
   next();
 });

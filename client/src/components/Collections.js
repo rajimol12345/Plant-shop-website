@@ -3,35 +3,31 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import './Collections.css';
 
-// Using the same assets as the previous implementation or placeholders if not found
-import featuredGiftGreen from '../assets/images/featured-gift-green.jpg';
-import featuredPetFriendly from '../assets/images/featured-pet-friendly.jpg';
-import featuredHousePlant from '../assets/images/featured-house-plant.jpg';
-import featuredAirPurifying from '../assets/images/featured-air-purifying.jpg';
+const apiUrl = process.env.REACT_APP_API_URL || '';
 
 const collections = [
     {
         id: 1,
         title: 'Gift Green',
-        image: featuredGiftGreen,
+        image: `${apiUrl}/images/featured-gift-green.jpg`,
         link: '/shop?category=Gift Green'
     },
     {
         id: 2,
         title: 'Pet Friendly',
-        image: featuredPetFriendly,
+        image: `${apiUrl}/images/featured-pet-friendly.jpg`,
         link: '/shop?category=Pet Friendly'
     },
     {
         id: 3,
         title: 'House Plant',
-        image: featuredHousePlant,
+        image: `${apiUrl}/images/featured-house-plant.jpg`,
         link: '/shop?category=House Plant'
     },
     {
         id: 4,
         title: 'Air Purifying',
-        image: featuredAirPurifying,
+        image: `${apiUrl}/images/featured-air-purifying.jpg`,
         link: '/shop?category=Air Purifying'
     }
 ];

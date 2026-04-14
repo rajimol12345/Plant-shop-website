@@ -3,31 +3,27 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Fade } from 'react-awesome-reveal';
 import './FeaturedCollection.css';
 
-import featuredGiftGreen from '../assets/images/featured-gift-green.jpg';
-import featuredPetFriendly from '../assets/images/featured-pet-friendly.jpg';
-import featuredHousePlant from '../assets/images/featured-house-plant.jpg';
-import featuredAirPurifying from '../assets/images/featured-air-purifying.jpg';
-
+const apiUrl = process.env.REACT_APP_API_URL || '';
 
 const collections = [
   {
     title: 'Gift Green',
-    image: featuredGiftGreen,
+    image: `${apiUrl}/images/featured-gift-green.jpg`,
     link: '/products/gifts'
   },
   {
     title: 'Pet Friendly',
-    image: featuredPetFriendly,
+    image: `${apiUrl}/images/featured-pet-friendly.jpg`,
     link: '/products/pet-friendly'
   },
   {
     title: 'House Plant',
-    image: featuredHousePlant,
+    image: `${apiUrl}/images/featured-house-plant.jpg`,
     link: '/products/house-plant'
   },
   {
     title: 'Air Purifying',
-    image: featuredAirPurifying,
+    image: `${apiUrl}/images/featured-air-purifying.jpg`,
     link: '/products/air-purifying'
   }
 ];

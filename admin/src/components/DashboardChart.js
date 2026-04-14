@@ -15,8 +15,8 @@ const DashboardChart = () => {
     return (
         <div className="card border-0 shadow-sm p-4">
             <h5 className="mb-4 fw-bold" style={{ fontFamily: 'Playfair Display', color: '#333' }}>Sales Analytics (Yearly)</h5>
-            <div style={{ width: '100%', height: 350, minWidth: 0 }}>
-                <ResponsiveContainer width="100%" height="100%">
+            <div style={{ width: '100%', height: 350, minWidth: 0, position: 'relative' }}>
+                <ResponsiveContainer width="100%" height="100%" minHeight={350}>
                     <AreaChart
                         data={data}
                         margin={{
